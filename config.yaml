@@ -1,0 +1,19 @@
+project:
+  title: "Speed-Robust IMU Detection of Propeller Faults in Drones"
+  random_seed: 42
+
+data:
+  raw_directory: "data/raw"
+  sampling_rate_hz: 500
+  window_seconds: 1.0
+  overlap_fraction: 0.5
+
+experiment:
+  task: "binary_classification"
+  healthy_label: 0
+  faulty_label: 1
+  test_fraction: 0.20
+
+output:
+  directory: "results"
+  figure_directory: "figures"
