@@ -1,0 +1,25 @@
+project:
+  title: "Multi-Rate Sensor Fusion Smoke Test"
+  seed: 42
+
+data:
+  raw_directory: "data/raw/dronepropb/DronePropB Ground Testing Dataset"
+  segment_seconds: 5.0
+  window_seconds: 1.0
+  overlap_fraction: 0.5
+  cache_file: "outputs_smoke/cache/recording_features.csv"
+  force_recompute: true
+
+validation:
+  inner_splits: 2
+  search_iterations: 1
+  bootstrap_iterations: 100
+  run_leave_one_speed_out: false
+
+compute:
+  use_gpu: true
+  cpu_threads: 8
+
+output:
+  directory: "outputs_smoke"
+  figure_dpi: 150
